@@ -1,0 +1,80 @@
+/********************************
+*********Text Copmonent**********
+********************************/
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2.125;
+  font-weight: 700;
+}
+
+#light h1 {
+  color: var(--darkBlue);
+}
+
+#dark h1 {
+  color: var(--white);
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+}
+
+h2:hover {
+  color: var(--darkGrey);
+}
+
+#light h2 {
+  color: var(--darkBlue);
+}
+
+#dark h2 {
+  color: var(--white);
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+#light h3 {
+  color: var(--darkBlue);
+}
+
+#dark h3 {
+  color: var(--white);
+}
+
+h4 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#light p {
+  color: var(--darkGrey);
+}
+
+#dark p {
+  color: var(--grey);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+};

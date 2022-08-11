@@ -1,0 +1,33 @@
+/****************************
+************Card*************
+****************************/
+
+.cardContainer {
+  height: 230px;
+  max-width: 350px;
+  background-color: var(--white);
+  position: relative;
+  border-radius: 6px;
+  padding-left: 32px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.cardContract {
+  display: flex;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.cardContractDot {
+  padding: 0 12px;
+}
+
+.cardPosition {
+  padding: 16px 0;
+}
+
+.cardLocation {
+  padding-top: 40px;
+
+}
