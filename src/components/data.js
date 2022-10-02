@@ -495,7 +495,7 @@ export const data = [
     company: 'Blogr',
     logo: 'blogr',
     logoBackground: 'hsl(12, 79%, 52%)',
-    position: 'Midweight Front-end Developer',
+    position: 'Midlevel Front-end Developer',
     postedAt: '1mo ago',
     contract: 'Full Time',
     location: 'United States',

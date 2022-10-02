@@ -9,18 +9,20 @@ export default function Card(props) {
   return (
     <div className="cardContainer">
       <Logos logo={logo} className="cardLogo" />
-      <div className="cardContract">
-        <Text type="p">{postedAt}</Text>
-        <span className="cardContractDot">&#8226;</span>
-        <Text type="p">{contract}</Text>
+      <div className="cardTextContainer">
+        <div className="cardContract">
+          <Text type="p">{postedAt}</Text>
+          <span className="cardContractDot">&#8226;</span>
+          <Text type="p">{contract}</Text>
+        </div>
+        <Text type="h3" className="cardPosition">
+          {position}
+        </Text>
+        <Text type="p">{company}</Text>
+        <Text type="h4" className="cardLocation">
+          {location}
+        </Text>
       </div>
-      <Text type="h3" className="cardPosition">
-        {position}
-      </Text>
-      <Text type="p">{company}</Text>
-      <Text type="h4" className="cardLocation">
-        {location}
-      </Text>
     </div>
   );
 }

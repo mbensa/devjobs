@@ -1,11 +1,12 @@
 import './App.css';
-import Jobs from './components/Jobs';
-import Logos from './components/Logos';
+import Header from './components/Header';
+import SearchBox from './components/SearchBox';
 
 export default function App() {
   return (
     <div className="App">
-      <Jobs />
+      <Header />
+      <SearchBox />
     </div>
   );
 }

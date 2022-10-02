@@ -3,14 +3,25 @@
 ****************************/
 
 .cardContainer {
-  height: 230px;
-  max-width: 350px;
+  width: 350px;
   background-color: var(--white);
   position: relative;
   border-radius: 6px;
-  padding-left: 32px;
-  text-align: left;
   margin-bottom: 50px;
+}
+
+#light .cardContainer {
+  background-color: var(--white);
+}
+
+#dark .cardContainer {
+  background-color: var(--midnight);
+}
+
+.cardTextContainer {
+  text-align: left;
+  height: 100%;
+  padding: 0 32px;
 }
 
 .cardContract {
@@ -28,6 +39,6 @@
 }
 
 .cardLocation {
-  padding-top: 40px;
+  padding: 40px 0;
 
 }

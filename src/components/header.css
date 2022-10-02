@@ -1,0 +1,30 @@
+/****************************
+***********Header************
+****************************/
+.headerContainer {
+  background-image: url("../assets/mobile/bg-pattern-header.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.mainLogo {
+  padding: 45px 0 85px 0;
+}
+
+@media (min-width: 768px) {
+  .headerContainer {
+    background-image: url("../assets/tablet/bg-pattern-header.svg");
+    padding: 0 40px;
+    background-position-y: bottom;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerContainer {
+    background-image: url("../assets/desktop/bg-pattern-header.svg");
+    padding: 0 165px;
+  }
+}
