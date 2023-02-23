@@ -1,0 +1,16 @@
+/***************************
+*********Input Box**********
+****************************/
+.inputContainer {
+    display: flex;
+    width: 70%;
+}
+
+.searchBoxIcon {
+    padding-left: 24px;
+    padding-right: 16px;
+}
+
+
+
+ 
