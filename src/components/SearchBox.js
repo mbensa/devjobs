@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import useMobile from '../hooks/useMobile';
+import InputBox from './InputBox';
+import Button from './Button';
+import Checkbox from './Checkbox';
 import { ReactComponent as Filter } from '../assets/mobile/icon-filter.svg';
 import { ReactComponent as Location } from '../assets/desktop/icon-location.svg';
 import './searchBox.css';
@@ -20,19 +23,21 @@ export default function SearchBox() {
     return (
       <div>
         <div className="searchBoxContainer">
-          <div className="inputContainer">
-            <input
-              type="search"
+            <InputBox
               id="searchByTitle"
-              name="title"
+              inputName="title"
               placeholder="Filter by title..."
             />
-          </div>
+  
           <div className="iconContainer">
-            <button className="filter" onClick={handleClickModal}>
-              <Filter />
-            </button>
-            <div className="searchBoxMobile"></div>
+            <Button 
+              onClick={handleClickModal}
+              filterIcon
+            />
+            <Button 
+              searchIcon
+              violet
+            />
           </div>
         </div>
 
@@ -41,23 +46,20 @@ export default function SearchBox() {
             <div className="modalBackground">
               <div className="modalContainer">
                 <div className="modalInputContainer">
-                  <Location />
-                  <input
-                    type="search"
+                  <InputBox 
+                    icon = 'location'
                     id="searchByLocation"
-                    name="location"
+                    inputName="location"
                     placeholder="Filter by location..."
+
                   />
                 </div>
                 <hr />
-                <div className="modalCheckboxContainer">
-                  <label className="modalLabelContainer">
-                    Full Time Only
-                    <input type="checkbox" />
-                    <span className="checkmark"></span>
-                  </label>
-                </div>
-                <button className="searchBoxModal">Search</button>
+                <Checkbox/>
+                <Button 
+                  violet
+                  btnText='Search'
+                />
               </div>
             </div>
           ) : (
