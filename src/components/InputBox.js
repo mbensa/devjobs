@@ -1,7 +1,7 @@
-import React from 'react';
-import { ReactComponent as Location } from '../assets/desktop/icon-location.svg';
-import { ReactComponent as Search } from '../assets/desktop/icon-search.svg';
-import './inputBox.css';
+import React from "react";
+import { ReactComponent as Location } from "../assets/desktop/icon-location.svg";
+import { ReactComponent as Search } from "../assets/desktop/icon-search.svg";
+import "./inputBox.css";
 
 const searchBoxIcons = {
     search: Search,
@@ -9,14 +9,14 @@ const searchBoxIcons = {
 };
 
 export default function InputBox(props) {
-    const { id, inputName, placeholder, icon} = props; 
+    const { id, inputName, placeholder, icon, className} = props; 
 
     const SearchBoxIcon = searchBoxIcons[icon];
 
     return (
-        <div className = "inputContainer">
+        <div className = {className}>
             {icon && (
-                <SearchBoxIcon className = 'searchBoxIcon'/>
+                <SearchBoxIcon className = "searchBoxIcon"/>
             )}
             <input
             type = "search"

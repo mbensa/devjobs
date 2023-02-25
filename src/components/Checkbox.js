@@ -1,10 +1,11 @@
 import React from 'react';
 import './checkbox.css';
 
-export default function Checkbox() {
+export default function Checkbox(props) {
+    const { className } = props;
 
     return (
-        <div className="checkboxContainer">
+        <div className={className}>
             <label className="labelContainer">
                 Full Time
             <input type="checkbox" />

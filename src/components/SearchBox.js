@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import useMobile from '../hooks/useMobile';
-import InputBox from './InputBox';
-import Button from './Button';
-import Checkbox from './Checkbox';
-import { ReactComponent as Filter } from '../assets/mobile/icon-filter.svg';
-import { ReactComponent as Location } from '../assets/desktop/icon-location.svg';
-import './searchBox.css';
+import React, { useState } from "react";
+import useMobile from "../hooks/useMobile";
+import InputBox from "./InputBox";
+import Button from "./Button";
+import Checkbox from "./Checkbox";
+import "./searchBox.css";
 
 export default function SearchBox() {
   const { isMobile } = useMobile();
@@ -22,17 +20,19 @@ export default function SearchBox() {
  if (isMobile) {
     return (
       <div>
-        <div className="searchBoxContainer">
+        <div className="searchBoxContainer mobileSearchBoxContainer">
             <InputBox
               id="searchByTitle"
               inputName="title"
               placeholder="Filter by title..."
+              className="mobileInputContainer"
             />
   
           <div className="iconContainer">
             <Button 
               onClick={handleClickModal}
               filterIcon
+              id="filterButton"
             />
             <Button 
               searchIcon
@@ -45,28 +45,62 @@ export default function SearchBox() {
           {modal ? (
             <div className="modalBackground">
               <div className="modalContainer">
-                <div className="modalInputContainer">
                   <InputBox 
-                    icon = 'location'
+                    icon = "location"
                     id="searchByLocation"
                     inputName="location"
                     placeholder="Filter by location..."
-
+                    className="modalInputContainer"
+                  />
+                <hr className="line"/>
+                <Checkbox
+                  className="checkboxContainer"
+                />
+                <div className="modalButtonContainer">
+                  <Button 
+                    violet
+                    btnText="Search"
+                    id="modalButton"
                   />
                 </div>
-                <hr />
-                <Checkbox/>
-                <Button 
-                  violet
-                  btnText='Search'
-                />
               </div>
             </div>
           ) : (
-            ''
+            ""
           )}
         </div>
       </div>
     );
+  } else {
+    return (
+      <div>
+         <div className="searchBoxContainer">
+            <InputBox
+              icon="search"
+              id="searchByTitle"
+              inputName="title"
+              placeholder="Filter by title..."
+              className="inputContainer"
+            />
+            <hr className="line"/>
+            <InputBox 
+              icon="location"
+              id="searchByLocation"
+              inputName="location"
+              placeholder="Filter by location..."
+              className="inputContainer"
+            />
+            <hr className="line"/>
+            <div className="searchContainer">
+              <Checkbox/>
+              <Button 
+                btnText="Search"
+                violet
+              />
+            </div>
+        </div>
+
+      </div>
+    )
   }
 }
