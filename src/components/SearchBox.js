@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import useMobile from "../hooks/useMobile";
 import InputBox from "./InputBox";
 import Button from "./Button";
@@ -9,17 +9,34 @@ export default function SearchBox() {
   const { isMobile } = useMobile();
 
   const [modal, setModal] = useState(false);
+
   const handleClickModal = () => {
     setModal(!modal);
   };
+
+  const ref = useRef();
   
-  const closeModal = () => {
-    setModal(modal);
-  };
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (modal && ref.current && !ref.current.contains(e.target)) {
+        setModal(false)
+      }
+    }
+
+    document.addEventListener("mousedown", checkIfClickedOutside)
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [modal]);
+
 
  if (isMobile) {
     return (
-      <div>
+      <div >
         <div className="searchBoxContainer mobileSearchBoxContainer">
             <InputBox
               id="searchByTitle"
@@ -42,9 +59,9 @@ export default function SearchBox() {
         </div>
 
         <div>
-          {modal ? (
-            <div className="modalBackground">
-              <div className="modalContainer">
+          {modal && (
+            <div className="modalBackground" >
+              <div className="modalContainer" ref={ref}>
                   <InputBox 
                     icon = "location"
                     id="searchByLocation"
@@ -65,9 +82,7 @@ export default function SearchBox() {
                 </div>
               </div>
             </div>
-          ) : (
-            ""
-          )}
+          ) }
         </div>
       </div>
     );

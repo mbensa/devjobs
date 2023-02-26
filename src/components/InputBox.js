@@ -9,7 +9,7 @@ const searchBoxIcons = {
 };
 
 export default function InputBox(props) {
-    const { id, inputName, placeholder, icon, className} = props; 
+    const { id, inputName, placeholder, icon, className, value, onChange} = props; 
 
     const SearchBoxIcon = searchBoxIcons[icon];
 
@@ -23,6 +23,8 @@ export default function InputBox(props) {
             id = {id}
             name = {inputName}
             placeholder = {placeholder}
+            value = {value}
+            onChange = {onChange}
             />
         </div>
     )
