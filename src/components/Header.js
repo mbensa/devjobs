@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="headerContainer">
       <Logo className="mainLogo" />
-      <ToggleSwitch />
+      <ToggleSwitch/>
     </div>
   );
 }
