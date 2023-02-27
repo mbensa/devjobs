@@ -27,7 +27,8 @@ body {
   --text-p: var(--darkGrey);
   --background: #F2F2F2;
   --background-second: var(--white);
-  --checkbox-text: #000000;
+  --searchbox-text: #000000;
+  --filter-fill: var(--darkGrey);
 }
 
 [data-theme="dark"] {
@@ -35,5 +36,6 @@ body {
   --text-p: var(--grey);
   --background: var(--midnight);
   --background-second: var(--darkBlue);
-  --checkbox-text: var(--white);
+  --searchbox-text: var(--white);
+  --filter-fill: var(--white);
 }

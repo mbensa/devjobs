@@ -4,6 +4,7 @@
 
 .input {
     background-color: var(--background-second);
+    color: var(--searchbox-text);
 }
 
 

@@ -35,7 +35,10 @@
 
 #filterButton {
   margin-right: 10px;
-  background-color: var(--background-second);
+}
+
+#filterButton > svg > path {
+  fill: var(--filter-fill);
 }
 
 #searchIconBtn {
@@ -53,7 +56,7 @@
 }
 
 .modalContainer {
-  background: var(--white);
+  background: var(--background-second);
   position: absolute;
   top: 41%;
   left: 0;
