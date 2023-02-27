@@ -3,7 +3,7 @@
 ****************************/
 
 .jobsContainer {
-  background-color: #F2F2F2;
+  background-color: var(--background);
   padding: 100px 25px 0 25px;
   display: grid;
   justify-content: center;

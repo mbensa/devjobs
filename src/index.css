@@ -23,4 +23,17 @@ body {
   --lightGrey: #F4F6F8;
   --grey: #9daec2;
   --darkGrey: #6E8098;
+  --text-heading: var(--darkBlue);
+  --text-p: var(--darkGrey);
+  --background: #F2F2F2;
+  --background-second: var(--white);
+  --checkbox-text: #000000;
+}
+
+[data-theme="dark"] {
+  --text-heading: var(--white);
+  --text-p: var(--grey);
+  --background: var(--midnight);
+  --background-second: var(--darkBlue);
+  --checkbox-text: var(--white);
 }

@@ -33,6 +33,7 @@ export default function SearchBox() {
     }
   }, [modal]);
 
+  
 
  if (isMobile) {
     return (
@@ -68,6 +69,7 @@ export default function SearchBox() {
                     inputName="location"
                     placeholder="Filter by location..."
                     className="modalInputContainer"
+                    
                   />
                 <hr className="line"/>
                 <Checkbox
@@ -114,6 +116,7 @@ export default function SearchBox() {
               />
             </div>
         </div>
+  
 
       </div>
     )

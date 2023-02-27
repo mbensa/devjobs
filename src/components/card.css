@@ -8,14 +8,7 @@
   position: relative;
   border-radius: 6px;
   margin-bottom: 50px;
-}
-
-#light .cardContainer {
-  background-color: var(--white);
-}
-
-#dark .cardContainer {
-  background-color: var(--midnight);
+  background-color: var(--background-second);
 }
 
 .cardTextContainer {
@@ -40,5 +33,5 @@
 
 .cardLocation {
   padding: 40px 0;
-
+  color: var(--violet);
 }

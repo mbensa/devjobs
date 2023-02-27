@@ -25,6 +25,7 @@ export default function InputBox(props) {
             placeholder = {placeholder}
             value = {value}
             onChange = {onChange}
+            className = "input"
             />
         </div>
     )

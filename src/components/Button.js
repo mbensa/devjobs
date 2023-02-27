@@ -7,7 +7,7 @@ export default function Button(props) {
     const { searchIcon, btnText, violet, filterIcon, onClick, id } = props;
 
     const styles = {
-        backgroundColor: violet ? '#5964E0' : '#FFFFFF',
+        backgroundColor: violet ? '#5964E0' : '',
     }
 
     return (
