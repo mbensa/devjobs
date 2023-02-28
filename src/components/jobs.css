@@ -3,6 +3,11 @@
 ****************************/
 
 .jobsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsContainer {
   background-color: var(--background);
   padding: 100px 25px 0 25px;
   display: grid;
@@ -11,17 +16,23 @@
 }
 
 @media (min-width: 768px) {
-  .jobsContainer {
+  .cardsContainer {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1280px) {
-  .jobsContainer {
+  .cardsContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .mainLogo {
   padding: 45px 0 85px 0;
+}
+
+#loadMoreBtn {
+  margin: 0 auto;
+  padding: 15px 35px;
+  margin-bottom: 50px;
 }

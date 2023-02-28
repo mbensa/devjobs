@@ -1,10 +1,17 @@
-import React from 'react';
-import Card from './Card';
-import { data } from './data';
-import './jobs.css';
+import React, { useState } from "react";
+import Card from "./Card";
+import Button from "./Button";
+import { data } from "./data";
+import "./jobs.css";
 
 export default function Jobs() {
-  const cards = data.map((item) => {
+  const [visible, setVisible] = useState(6);
+
+  const showMoreItems = () => {
+    setVisible((prevValue) => prevValue + 6);
+  };
+
+  const cards = data.slice(0, visible).map((item) => {
     return (
       <Card
         key={item.id}
@@ -18,5 +25,10 @@ export default function Jobs() {
     );
   });
 
-  return <section className="jobsContainer">{cards}</section>;
+  return (
+    <section className="jobsContainer">
+      <div className="cardsContainer">{cards}</div>
+      {visible < data.length && <Button onClick={showMoreItems} btnText="Load More" violet id="loadMoreBtn" />}
+    </section>
+  );
 }

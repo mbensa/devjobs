@@ -1,7 +1,7 @@
-import React from 'react';
-import Text from './Text';
-import Logos from './Logos';
-import './card.css';
+import React from "react";
+import Text from "./Text";
+import Logos from "./Logos";
+import "./card.css";
 
 export default function Card(props) {
   const { logo, postedAt, contract, position, company, location } = props;
