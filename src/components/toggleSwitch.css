@@ -34,7 +34,7 @@
 
 .toggle-switch .switch::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 4px;
   top: 4px;
   width: 17px;

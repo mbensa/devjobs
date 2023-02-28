@@ -17,18 +17,18 @@
     -ms-user-select: none;
     user-select: none;
     color: var(--searchbox-text);
-  
+
 }
-  
+
 .labelContainer input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  
+
 }
-  
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -38,21 +38,21 @@
     background-color: #e7e8e9;
     border-radius: 3px;
 }
-  
+
 .labelContainer input:checked ~ .checkmark {
     background-color: var(--violet);
 }
-  
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-  
+
 .labelContainer input:checked ~ .checkmark:after {
     display: block;
 }
-  
+
 .labelContainer .checkmark:after {
     left: 6px;
     top: 2px;
@@ -64,4 +64,3 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-  

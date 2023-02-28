@@ -26,9 +26,9 @@ export default function Jobs() {
   });
 
   return (
-    <section className="jobsContainer">
+    <div className="jobsContainer">
       <div className="cardsContainer">{cards}</div>
       {visible < data.length && <Button onClick={showMoreItems} btnText="Load More" violet id="loadMoreBtn" />}
-    </section>
+    </div>
   );
 }
