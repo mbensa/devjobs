@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useForm } from "react-hook-form";
 import useMobile from "../hooks/useMobile";
 import InputBox from "./InputBox";
 import Button from "./Button";
@@ -33,6 +34,9 @@ export default function SearchBox() {
     };
   }, [modal]);
 
+  const { handleSubmit, register } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   if (isMobile) {
     return (
       <div>
@@ -46,7 +50,7 @@ export default function SearchBox() {
 
           <div className="iconContainer">
             <Button onClick={handleClickModal} filterIcon id="filterButton" />
-            <Button searchIcon violet />
+            <Button searchIcon violet id="searchBtnMobile" />
           </div>
         </div>
 
@@ -54,6 +58,14 @@ export default function SearchBox() {
           {modal && (
             <div className="modalBackground">
               <div className="modalContainer" ref={ref}>
+                <InputBox
+                  id="searchByTitle"
+                  icon="search"
+                  inputName="title"
+                  placeholder="Filter by title..."
+                  className="modalInputContainer"
+                />
+                <hr className="line" />
                 <InputBox
                   icon="location"
                   id="searchByLocation"
@@ -75,28 +87,32 @@ export default function SearchBox() {
   } else {
     return (
       <div>
-        <div className="searchBoxContainer">
-          <InputBox
-            icon="search"
-            id="searchByTitle"
-            inputName="title"
-            placeholder="Filter by title..."
-            className="inputContainer"
-          />
-          <hr className="line" />
-          <InputBox
-            icon="location"
-            id="searchByLocation"
-            inputName="location"
-            placeholder="Filter by location..."
-            className="inputContainer"
-          />
-          <hr className="line" />
-          <div className="searchContainer">
-            <Checkbox />
-            <Button btnText="Search" violet />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="searchBoxContainer">
+            <InputBox
+              register={register}
+              icon="search"
+              id="searchByTitle"
+              inputName="title"
+              placeholder="Filter by title..."
+              className="inputContainer"
+            />
+            <hr className="line" />
+            <InputBox
+              register={register}
+              icon="location"
+              id="searchByLocation"
+              inputName="location"
+              placeholder="Filter by location..."
+              className="inputContainer"
+            />
+            <hr className="line" />
+            <div className="searchContainer">
+              <Checkbox register={register} />
+              <Button btnText="Search" violet />
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     );
   }

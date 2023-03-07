@@ -9,22 +9,14 @@ const searchBoxIcons = {
 };
 
 export default function InputBox(props) {
-  const { id, inputName, placeholder, icon, className, value, onChange } = props;
+  const { id, inputName, placeholder, icon, className, register } = props;
 
   const SearchBoxIcon = searchBoxIcons[icon];
 
   return (
     <div className={className}>
       {icon && <SearchBoxIcon className="searchBoxIcon" />}
-      <input
-        type="search"
-        id={id}
-        name={inputName}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        className="input"
-      />
+      <input type="search" id={id} {...register(inputName)} placeholder={placeholder} className="input" />
     </div>
   );
 }

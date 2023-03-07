@@ -41,8 +41,8 @@
   fill: var(--filter-fill);
 }
 
-#searchIconBtn {
-  background-color: var(--violet);
+#searchBtnMobile > svg > path {
+  fill: var(--white);
 }
 
 .modalBackground {
