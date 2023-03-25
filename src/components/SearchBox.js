@@ -35,50 +35,62 @@ export default function SearchBox() {
   }, [modal]);
 
   const { handleSubmit, register } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    if (isMobile && modal) {
+      setModal(!modal);
+    }
+    console.log(data);
+  };
 
   if (isMobile) {
     return (
       <div>
-        <div className="searchBoxContainer mobileSearchBoxContainer">
-          <InputBox
-            id="searchByTitle"
-            inputName="title"
-            placeholder="Filter by title..."
-            className="mobileInputContainer"
-          />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="searchBoxContainer mobileSearchBoxContainer">
+            <InputBox
+              register={register}
+              id="searchByTitle"
+              inputName="title"
+              placeholder="Filter by title..."
+              className="mobileInputContainer"
+            />
 
-          <div className="iconContainer">
-            <Button onClick={handleClickModal} filterIcon id="filterButton" />
-            <Button searchIcon violet id="searchBtnMobile" />
+            <div className="iconContainer">
+              <Button type="button" onClick={handleClickModal} filterIcon id="filterButton" />
+              <Button searchIcon violet id="searchBtnMobile" />
+            </div>
           </div>
-        </div>
+        </form>
 
         <div>
           {modal && (
             <div className="modalBackground">
-              <div className="modalContainer" ref={ref}>
-                <InputBox
-                  id="searchByTitle"
-                  icon="search"
-                  inputName="title"
-                  placeholder="Filter by title..."
-                  className="modalInputContainer"
-                />
-                <hr className="line" />
-                <InputBox
-                  icon="location"
-                  id="searchByLocation"
-                  inputName="location"
-                  placeholder="Filter by location..."
-                  className="modalInputContainer"
-                />
-                <hr className="line" />
-                <Checkbox className="checkboxContainer" />
-                <div className="modalButtonContainer">
-                  <Button violet btnText="Search" id="modalButton" />
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="modalContainer" ref={ref}>
+                  <InputBox
+                    register={register}
+                    id="searchByTitle"
+                    icon="search"
+                    inputName="title"
+                    placeholder="Filter by title..."
+                    className="modalInputContainer"
+                  />
+                  <hr className="line" />
+                  <InputBox
+                    register={register}
+                    icon="location"
+                    id="searchByLocation"
+                    inputName="location"
+                    placeholder="Filter by location..."
+                    className="modalInputContainer"
+                  />
+                  <hr className="line" />
+                  <Checkbox register={register} className="checkboxContainer" />
+                  <div className="modalButtonContainer">
+                    <Button violet btnText="Search" id="modalButton" />
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           )}
         </div>
