@@ -6,7 +6,9 @@ import Button from "./Button";
 import Checkbox from "./Checkbox";
 import "./searchBox.css";
 
-export default function SearchBox() {
+export default function SearchBox(props) {
+  const { onFiltersChange } = props;
+
   const { isMobile } = useMobile();
 
   const [modal, setModal] = useState(false);
@@ -39,7 +41,7 @@ export default function SearchBox() {
     if (isMobile && modal) {
       setModal(!modal);
     }
-    console.log(data);
+    onFiltersChange(data);
   };
 
   if (isMobile) {

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Button from "./Button";
-import { data } from "./data";
 import "./jobs.css";
 
-export default function Jobs() {
+export default function Jobs(props) {
+  const { data } = props;
   const [visible, setVisible] = useState(6);
 
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 6);
   };
+
+  console.log(data);
 
   const cards = data.slice(0, visible).map((item) => {
     return (

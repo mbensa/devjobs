@@ -1,14 +1,12 @@
 import "./App.css";
 import Header from "./components/Header";
-import SearchBox from "./components/SearchBox";
-import Jobs from "./components/Jobs";
+import FilteredJobs from "./components/FilteredJobs";
 
 export default function App() {
   return (
     <div className="app">
       <Header />
-      <SearchBox />
-      <Jobs />
+      <FilteredJobs />
     </div>
   );
 }
