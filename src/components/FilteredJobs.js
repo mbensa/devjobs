@@ -23,7 +23,11 @@ export default function FilteredJobs() {
       );
     }
 
-    if (filters && !filters.location && !filters.title) {
+    if (filters && filters.checkbox) {
+      setData((prevData) => prevData.filter((item) => item.contract === "Full Time"));
+    }
+
+    if (filters && !filters.location && !filters.title && !filters.checkbox) {
       setData(originalData);
     }
   }, [filters]);
