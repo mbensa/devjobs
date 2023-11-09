@@ -2,10 +2,40 @@
 ****Details Card Header******
 ****************************/
 
-.detailsHeaderContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.logoBox {
+  top: auto;
+  left: auto;
+  position:initial;
 }
 
+.detailsHeaderContainer {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    margin: 0 24px;
+    border-radius: 6px;
+    margin-top: -20px;
+}
 
+.detailsHeaderLogoContainer {
+  margin-top: -25px;
+}
+
+.detailsHeaderTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.detailsHeaderText {
+  padding: 24px 0;
+  text-align: center;
+}
+
+#detailsHeaderButton {
+  background-color: rgba(89, 100, 224, 0.1);
+  color: var(--violet);
+  font-weight: bold;
+}

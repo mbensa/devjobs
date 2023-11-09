@@ -1,10 +1,10 @@
 import "./App.css";
-import Main from "./pages/Main";
+import Details from "./pages/Details";
 
 export default function App() {
   return (
     <div className="app">
-      <Main></Main>
+      <Details />
     </div>
   );
 }

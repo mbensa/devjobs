@@ -17,7 +17,7 @@ export default function DeatilsCardHeader(props) {
           <Text type="p">website</Text>
         </div>
         <div className="detailsHeaderButton">
-          <Button btnText="Company Site" id="detailsHeaderButton"></Button>
+          <Button btnText="Company Site" violet id="detailsHeaderButton"></Button>
         </div>
       </div>
     </div>
