@@ -10,12 +10,12 @@
 
 .detailsHeaderContainer {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white);
-    margin: 0 24px;
-    border-radius: 6px;
-    margin-top: -20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-second);
+  margin: 0 24px;
+  border-radius: 15px;
+  margin-top: -20px;
 }
 
 .detailsHeaderLogoContainer {
@@ -35,7 +35,41 @@
 }
 
 #detailsHeaderButton {
-  background-color: rgba(89, 100, 224, 0.1);
-  color: var(--violet);
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+  .detailsHeaderContainer {
+    flex-direction: row;
+    height: 140px;
+    margin-top: -25px;
+  }
+
+  .detailsHeaderLogoContainer {
+    width: 140px;
+    height: 140px;
+    margin-top: 0;
+  }
+
+  .logoBox {
+    border-radius: 15px 0 0 15px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .detailsHeaderTextContainer {
+    padding: 0 40px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .detailsHeaderContainer {
+    max-width: 730px;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+}
+

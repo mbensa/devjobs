@@ -33,9 +33,9 @@ export default function FilteredJobs() {
   }, [filters]);
 
   return (
-    <>
+    <main>
       <SearchBox onFiltersChange={setFilters} />
       <Jobs data={data} />
-    </>
+    </main>
   );
 }

@@ -5,9 +5,9 @@ import "./header.css";
 
 export default function Header() {
   return (
-    <div className="headerContainer">
+    <header className="headerContainer">
       <Logo className="mainLogo" />
       <ToggleSwitch />
-    </div>
+    </header>
   );
 }
