@@ -29,11 +29,11 @@ const companyLogos = {
 };
 
 export default function Logos(props) {
-  const { logo } = props;
+  const { logo, className } = props;
   const [CompanyLogo, color] = companyLogos[logo];
 
   return (
-    <Box color={color}>
+    <Box className={className} color={color}>
       <CompanyLogo />
     </Box>
   );

@@ -1,3 +1,10 @@
 .mainContainer {
   flex: 1 0 auto;
 }
+
+@media (min-width: 1280px) {
+  .mainContainer {
+    width: 730px;
+    margin: 0 auto;
+  }
+}

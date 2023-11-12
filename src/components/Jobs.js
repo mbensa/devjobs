@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "./Card";
 import Button from "./Button";
 import "./jobs.css";
+import { Link } from "react-router-dom";
 
 export default function Jobs(props) {
   const { data } = props;
@@ -15,15 +16,16 @@ export default function Jobs(props) {
 
   const cards = data.slice(0, visible).map((item) => {
     return (
-      <Card
-        key={item.id}
-        logo={item.logo}
-        postedAt={item.postedAt}
-        contract={item.contract}
-        position={item.position}
-        company={item.company}
-        location={item.location}
-      />
+      <Link key={item.id} to={`details/${item.id}`}>
+        <Card
+          logo={item.logo}
+          postedAt={item.postedAt}
+          contract={item.contract}
+          position={item.position}
+          company={item.company}
+          location={item.location}
+        />
+      </Link>
     );
   });
 

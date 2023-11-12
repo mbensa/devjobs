@@ -6,15 +6,16 @@ import "./detailsCardHeader.css";
 
 export default function DeatilsCardHeader(props) {
   const { logo, company, website } = props;
+
   return (
     <section className="detailsHeaderContainer">
       <div className="detailsHeaderLogoContainer">
-        <Logos logo="scoot" className="detailsHeaderLogo"></Logos>
+        <Logos logo={logo} className="detailsHeaderLogo"></Logos>
       </div>
       <div className="detailsHeaderTextContainer">
         <div className="detailsHeaderText">
-          <Text type="h2">company</Text>
-          <Text type="p">website</Text>
+          <Text type="h2">{company}</Text>
+          <Text type="p">{website}</Text>
         </div>
         <div className="detailsHeaderButton">
           <Button btnText="Company Site" violet id="detailsHeaderButton"></Button>

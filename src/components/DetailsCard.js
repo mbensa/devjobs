@@ -10,15 +10,15 @@ export default function DeatilsCard(props) {
       <div className="detailsTitleContainer">
         <div className="detailsTitleText">
           <div className="detailsContract">
-            <Text type="p">1 w ago</Text>
+            <Text type="p">{postedAt}</Text>
             <span className="detailsContractDot">&#8226;</span>
-            <Text type="p">Part Time</Text>
+            <Text type="p">{contract}</Text>
           </div>
           <Text type="h3" className="detailsPosition">
-            Software Engineer
+            {position}
           </Text>
           <Text type="h4" className="detailsLocation">
-            United Kingdom
+            {location}
           </Text>
         </div>
         <div className="detailsButton">

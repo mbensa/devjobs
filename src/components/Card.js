@@ -8,7 +8,7 @@ export default function Card(props) {
 
   return (
     <div className="cardContainer">
-      <Logos logo={logo} className="cardLogo" />
+      <Logos logo={logo} className="logoBox" />
       <div className="cardTextContainer">
         <div className="cardContract">
           <Text type="p">{postedAt}</Text>

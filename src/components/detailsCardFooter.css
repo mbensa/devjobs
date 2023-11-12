@@ -12,3 +12,15 @@
   width: 100%;
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+  .detailsFooterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #detailsFooterButton {
+    width: 120px;
+  }
+}
