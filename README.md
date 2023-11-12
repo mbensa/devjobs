@@ -21,7 +21,7 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ## Links
 
@@ -41,4 +41,4 @@ Users should be able to:
 
 - Website - [Mojca Bensa](https://www.mbensa.com)
 - Frontend Mentor - [@mbensa](https://www.frontendmentor.io/profile/mbensa)
-- GitHub - [@mbensa](https://github.com/mbensa/photosnap)
+- GitHub - [@mbensa](https://github.com/mbensa/devjobs)
