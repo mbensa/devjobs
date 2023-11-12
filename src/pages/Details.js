@@ -12,7 +12,7 @@ export default function Details() {
   const [job, setJob] = useState();
 
   useEffect(() => {
-    setJob(data.find((job) => job.id == cardId));
+    setJob(data.find((job) => String(job.id) === cardId));
   }, [cardId]);
 
   if (!job) {
