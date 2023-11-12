@@ -7,7 +7,7 @@ import "./detailsCardHeader.css";
 export default function DeatilsCardHeader(props) {
   const { logo, company, website } = props;
   return (
-    <div className="detailsHeaderContainer">
+    <section className="detailsHeaderContainer">
       <div className="detailsHeaderLogoContainer">
         <Logos logo="scoot" className="detailsHeaderLogo"></Logos>
       </div>
@@ -20,6 +20,6 @@ export default function DeatilsCardHeader(props) {
           <Button btnText="Company Site" violet id="detailsHeaderButton"></Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

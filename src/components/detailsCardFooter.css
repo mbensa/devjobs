@@ -1,0 +1,14 @@
+/****************************
+****Details Card Footer******
+****************************/
+
+.detailsFooterContainer {
+  background-color: var(--background-second);
+  padding: 25px;
+  flex-shrink: 0;
+}
+
+#detailsFooterButton {
+  width: 100%;
+  font-weight: bold;
+}

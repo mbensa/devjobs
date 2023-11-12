@@ -6,7 +6,7 @@ import "./detailsCard.css";
 export default function DeatilsCard(props) {
   const { postedAt, contract, position, location } = props;
   return (
-    <div className="detailsContainer">
+    <section className="detailsContainer">
       <div className="detailsTitleContainer">
         <div className="detailsTitleText">
           <div className="detailsContract">
@@ -73,7 +73,7 @@ export default function DeatilsCard(props) {
             tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu
             pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
           </Text>
-          <ul>
+          <ol>
             <li>
               <Text type="p">Morbi interdum mollis sapien. Sed</Text>
             </li>
@@ -89,9 +89,9 @@ export default function DeatilsCard(props) {
             <li>
               <Text type="p">Morbi interdum mollis sapien. Sed</Text>
             </li>
-          </ul>
+          </ol>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

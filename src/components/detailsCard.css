@@ -2,3 +2,95 @@
 **Details Card Description***
 ****************************/
 
+.detailsContainer {
+  background-color: var(--background-second);
+  margin: 24px;
+  border-radius: 15px;
+  padding: 0 24px;
+}
+
+.detailsTitleContainer {
+  padding: 40px 0;
+}
+
+.detailsContract {
+  display: flex;
+}
+
+.detailsContractDot {
+  padding: 0 10px;
+  color: var(--text-p);
+}
+
+.detailsPosition {
+  padding: 8px 0;
+}
+
+.detailsTitleText {
+  padding-bottom: 50px;
+}
+
+.detailsLocation {
+  color: var(--violet);
+}
+
+.detailsRequirements {
+  padding: 40px 0;
+}
+
+.detailsRequirements h3 {
+  padding-bottom: 20px;
+}
+
+.detailsRequirements p {
+  padding-bottom: 10px;
+}
+
+.detailsTasks h3 {
+  padding-bottom: 20px;
+}
+
+.detailsTasks p {
+  padding-bottom: 10px;
+}
+
+ul li {
+  margin-left: 1em;
+}
+
+ul li::marker {
+  color: var(--text-p);
+}
+
+ol li {
+  margin-left: 1em;
+}
+
+ol li::marker {
+  color: var(--text-p);
+}
+
+#detailsButton {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .detailsContainer {
+    padding: 0 40px;
+  }
+
+  .detailsTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detailsTitleText {
+    padding-bottom: 0;
+  }
+
+  #detailsButton {
+    width: 120px;
+  }
+
+}

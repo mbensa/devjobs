@@ -63,9 +63,17 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  .detailsHeaderText {
+    text-align: left;
+  }
+
+  #detailsHeaderButton {
+    width: 120px;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .detailsHeaderContainer {
     max-width: 730px;
     margin: 0 auto;
