@@ -24,6 +24,9 @@ html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
 
 :root {
   --violet: #5964E0;
@@ -34,12 +37,14 @@ html {
   --lightGrey: #F4F6F8;
   --grey: #9daec2;
   --darkGrey: #6E8098;
+  --checkmarkGrey: #e7e8e9;
   --text-heading: var(--darkBlue);
   --text-p: var(--darkGrey);
   --background: #F2F2F2;
   --background-second: var(--white);
   --searchbox-text: #000000;
   --filter-fill: var(--darkGrey);
+  --checkmark: var(--checkmarkGrey);
 }
 
 [data-theme="dark"] {
@@ -49,4 +54,5 @@ html {
   --background-second: var(--darkBlue);
   --searchbox-text: var(--white);
   --filter-fill: var(--white);
+  --checkmark: var(--darkGrey);
 }
