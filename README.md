@@ -26,7 +26,7 @@ Users should be able to:
 ## Links
 
 - Solution URL: [GitHub](https://github.com/mbensa/devjobs)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [DevJobs](https://devjobs-mbensa.netlify.app/)
 
 ## Built with
 
