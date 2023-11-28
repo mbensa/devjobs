@@ -4,7 +4,7 @@
 
 h1 {
   font-size: 1.75rem;
-  line-height: 2.125;
+  line-height: 2.125rem;
   font-weight: 700;
   color: var(--text-heading);
 }
@@ -42,7 +42,7 @@ p {
 @media (min-width: 768px) {
   h1 {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.5rem;
   }
 
   h2 {
